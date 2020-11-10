@@ -131,6 +131,7 @@ nav #order a {
 .image-side {
   display: flex;
   flex: 1;
+  padding: 10px;
 }
 
 .text-side {
@@ -385,6 +386,11 @@ nav #order a {
   margin: 1rem;
 }
 
+.image-side img {
+  width: 100%;
+  height: 300px;
+}
+
 @media screen and (max-width: 1280px) {
   .product-grid {
     display: grid;
@@ -394,18 +400,13 @@ nav #order a {
   }
 
   .text-side h1 {
-    font-size: 3.25vw;
+    font-size: 3vw;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .image-side img {
-    width: 75%;
-    height: 100%;
-  }
-
   .text-side h1 {
-    font-size: 3.25vw;
+    font-size: 3vw;
   }
 
   .product-grid {
@@ -418,6 +419,19 @@ nav #order a {
 }
 
 @media screen and (max-width: 850px) {
+  .featured h2 {
+    text-align: center;
+  }
+  footer,
+  main {
+    padding-left: 0;
+  }
+
+  .intro,
+  .store-info {
+    padding-left: 2.75rem;
+  }
+
   nav .links {
     font-size: 1.5vw;
     flex: 2;
@@ -437,7 +451,7 @@ nav #order a {
   }
 
   .text-side h1 {
-    font-size: 3.25vw;
+    font-size: 3vw;
   }
 
   .text-side .intro-desc {
@@ -451,11 +465,25 @@ nav #order a {
   .right-side form {
     text-align: center;
   }
+
+  .store-loc,
+  .store-hours,
+  .store-num,
+  .left-side,
+  .right-side {
+    flex: initial;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 659px) {
+  nav .logo-container,
+  nav .links,
+  .image-side,
+  .text-side {
+    flex: initial;
+  }
+
   nav .logo-container {
-    flex: 2;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -491,10 +519,6 @@ nav #order a {
     justify-content: center;
   }
 
-  main {
-    margin-top: 2rem;
-  }
-
   main,
   footer {
     padding: 0;
@@ -510,7 +534,8 @@ nav #order a {
   }
 
   .text-side h1 {
-    font-size: 25px;
+    font-size: 22px;
+    text-align: center;
   }
 
   .text-side .intro-desc {
@@ -521,11 +546,6 @@ nav #order a {
   .image-side {
     justify-content: center;
     margin-top: 2rem;
-  }
-
-  .image-side img {
-    width: 90%;
-    height: 100%;
   }
 
   .right-side form {
