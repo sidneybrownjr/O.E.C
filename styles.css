@@ -44,6 +44,7 @@ main {
 }
 
 footer {
+  padding-left: 2.75rem;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -80,7 +81,7 @@ nav .links {
   flex: 1;
   justify-content: space-around;
   align-items: center;
-  font-size: 18px;
+  font-size: 1vw;
 }
 
 .links > a::before {
@@ -137,11 +138,11 @@ nav #order a {
 }
 
 .text-side h1 {
-  font-size: 50px;
+  font-size: 3vw;
 }
 
 .text-side .intro-desc {
-  font-size: 18px;
+  font-size: 1.25vw;
   font-weight: 300;
   color: #9e9491;
 }
@@ -159,10 +160,13 @@ nav #order a {
   text-decoration: none;
 }
 
+.image-side {
+  justify-content: end;
+}
+
 .image-side img {
-  text-align: right;
-  width: 97%;
-  height: 45vh;
+  width: 75%;
+  height: 100%;
 }
 
 .store-info {
@@ -186,6 +190,8 @@ nav #order a {
   justify-content: center;
   font-weight: bolder;
   padding: 4rem;
+  font-size: 14px;
+  text-align: center;
 }
 
 .phone {
@@ -229,6 +235,8 @@ nav #order a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 1rem;
   padding: 0 2rem;
+  align-items: center;
+  justify-items: center;
 }
 
 .products {
@@ -375,4 +383,164 @@ nav #order a {
 
 .reserved p {
   margin: 1rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  .text-side h1 {
+    font-size: 3.25vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image-side img {
+    width: 75%;
+    height: 100%;
+  }
+
+  .text-side h1 {
+    font-size: 3.25vw;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .right-side h2 {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav .links {
+    font-size: 1.5vw;
+    flex: 2;
+  }
+
+  .store-info {
+    flex-direction: column;
+  }
+
+  .product-grid {
+    padding: 0;
+    column-gap: 0.5rem;
+  }
+
+  .footer-split {
+    flex-direction: column-reverse;
+  }
+
+  .text-side h1 {
+    font-size: 3.25vw;
+  }
+
+  .text-side .intro-desc {
+    font-size: 1.75vw;
+  }
+
+  .right-side h2 {
+    font-size: 25px;
+  }
+
+  .right-side form {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav .logo-container {
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav .links {
+    margin-top: 1rem;
+  }
+
+  nav .links a,
+  nav #order a {
+    font-size: 3vw;
+    align-items: center;
+    justify-items: center;
+    color: #d0311a;
+  }
+
+  nav #order a {
+    cursor: pointer;
+    background-color: initial;
+    padding: 0;
+    color: initial;
+    border-radius: 0;
+    color: #d0311a;
+  }
+
+  .intro {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main {
+    margin-top: 2rem;
+  }
+
+  main,
+  footer {
+    padding: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .text-side {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-side h1 {
+    font-size: 25px;
+  }
+
+  .text-side .intro-desc {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .image-side {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .image-side img {
+    width: 90%;
+    height: 100%;
+  }
+
+  .right-side form {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .featured h2,
+  .right-side h2 {
+    text-align: center;
+  }
+
+  .store-loc,
+  .store-hours,
+  .store-num {
+    text-align: center;
+  }
 }
